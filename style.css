@@ -1,0 +1,345 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+}
+
+.nav-link {
+    font-weight: normal;
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.background {
+    background-image: url('portfolio-background.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 123, 255, 0.5);
+    z-index: 0;
+}
+
+.card-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    top: 100px;
+}
+
+.card {
+    flex: 1 1 300px;
+    max-width: 400px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card-info {
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-info h3 {
+    font-weight: bold;
+}
+
+.card-info p {
+    margin: 0.5rem 0;
+}
+
+.card-container>.card {
+    height: 500px;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    color: black;
+    background-color: rgba(0, 123, 255, 0.5);
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+}
+.greydiv{
+    background-color: #F1F1F1;
+}
+.about-me {
+max-width: 800px;
+margin: 3rem auto;
+text-align: center;
+padding: 2rem 2rem 1rem ;
+font-size: 1.1rem;
+color: #333;
+}
+
+.about-me h2 {
+margin-bottom: 1rem;
+font-weight: bold;
+font-size: 2rem;
+}
+
+.about-me p {
+line-height: 1.6;
+}
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    padding: 40px 0;
+    max-width: 1000px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: #ccc;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: navy;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-left,
+.timeline-right {
+    width: 45%;
+}
+
+.timeline-left {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.timeline-right {
+    padding-left: 20px;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: navy;
+    letter-spacing: 2px;
+}
+
+.timeline-role {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.timeline-company {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+
+    .timeline-left,
+    .timeline-right {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+
+    .timeline-item::before {
+        left: 0;
+        transform: translateX(0);
+    }
+}
+.experience{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.education{
+  display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.skills{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 48px;
+  background-color: #182153;
+  color: white;
+  border: 0.5px solid white;
+}
+
+.skill-cards {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cards {
+    width: 45%;
+    height: 100px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease;
+  }
+  
+  .cards.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* delay for each card */
+  .cards:nth-child(1) { animation-delay: 0.1s; }
+  .cards:nth-child(2) { animation-delay: 0.2s; }
+  .cards:nth-child(3) { animation-delay: 0.3s; }
+  .cards:nth-child(4) { animation-delay: 0.4s; }
+  .cards:nth-child(5) { animation-delay: 0.5s; }
+  .cards:nth-child(6) { animation-delay: 0.6s; }
+  
+  @keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .sticky-top {
+    top: 0;
+    z-index: 1020; /* Make sure it's above other stuff */
+  }
+  .form-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container .form-group label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
